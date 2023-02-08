@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using NET_Mom3.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// DB Connection
+builder.Services.AddDbContext<CDContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultDbString")));
 
 var app = builder.Build();
 
