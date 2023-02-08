@@ -18650,8 +18650,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ebbah\\Dropbox\\WEBBUTVECKLING-PROGRAMMET\\Kod\\Webbutveckling med .NET\\NET_Mom3\\Views\\CD\\Edit.cshtml",
+      "TargetPath": "Views\\CD\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ebbah\\Dropbox\\WEBBUTVECKLING-PROGRAMMET\\Kod\\Webbutveckling med .NET\\NET_Mom3\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ebbah\\Dropbox\\WEBBUTVECKLING-PROGRAMMET\\Kod\\Webbutveckling med .NET\\NET_Mom3\\Views\\CD\\Delete.cshtml",
+      "TargetPath": "Views\\CD\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18675,8 +18685,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ebbah\\Dropbox\\WEBBUTVECKLING-PROGRAMMET\\Kod\\Webbutveckling med .NET\\NET_Mom3\\Views\\CD\\Details.cshtml",
+      "TargetPath": "Views\\CD\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ebbah\\Dropbox\\WEBBUTVECKLING-PROGRAMMET\\Kod\\Webbutveckling med .NET\\NET_Mom3\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ebbah\\Dropbox\\WEBBUTVECKLING-PROGRAMMET\\Kod\\Webbutveckling med .NET\\NET_Mom3\\Views\\CD\\Index.cshtml",
+      "TargetPath": "Views\\CD\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ebbah\\Dropbox\\WEBBUTVECKLING-PROGRAMMET\\Kod\\Webbutveckling med .NET\\NET_Mom3\\Views\\CD\\Create.cshtml",
+      "TargetPath": "Views\\CD\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],

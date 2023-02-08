@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ebbah\Dropbox\WEBBUTVECKLING-PROGRAMMET\Kod\Webbutveckling med .NET\NET_Mom3
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ebbah/Dropbox/WEBBUTVECKLING-PROGRAMMET/Kod/Webbutveckling med .NET/NET_Mom3/Views/CD/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0RcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ebbah/Dropbox/WEBBUTVECKLING-PROGRAMMET/Kod/Webbutveckling med .NET/NET_Mom3/Views/CD/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0RcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ebbah/Dropbox/WEBBUTVECKLING-PROGRAMMET/Kod/Webbutveckling med .NET/NET_Mom3/Views/CD/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0RcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ebbah/Dropbox/WEBBUTVECKLING-PROGRAMMET/Kod/Webbutveckling med .NET/NET_Mom3/Views/CD/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0RcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ebbah/Dropbox/WEBBUTVECKLING-PROGRAMMET/Kod/Webbutveckling med .NET/NET_Mom3/Views/CD/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ebbah/Dropbox/WEBBUTVECKLING-PROGRAMMET/Kod/Webbutveckling med .NET/NET_Mom3/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
