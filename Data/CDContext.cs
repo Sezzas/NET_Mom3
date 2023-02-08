@@ -10,6 +10,7 @@ namespace NET_Mom3.Data {
         }
 
         public DbSet<CD> CD { get; set; }
+        public DbSet<Artist> Artist { get; set; }
 
     }
 

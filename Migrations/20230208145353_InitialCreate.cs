@@ -12,6 +12,19 @@ namespace NETMom3.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Artist",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Artist", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "CD",
                 columns: table => new
                 {
@@ -20,12 +33,23 @@ namespace NETMom3.Migrations
                     Name = table.Column<string>(type: "TEXT", nullable: true),
                     PublishedDate = table.Column<DateOnly>(type: "TEXT", nullable: false),
                     Tracks = table.Column<int>(type: "INTEGER", nullable: false),
-                    Length = table.Column<string>(type: "TEXT", nullable: true)
+                    Length = table.Column<string>(type: "TEXT", nullable: true),
+                    ArtistId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CD", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CD_Artist_ArtistId",
+                        column: x => x.ArtistId,
+                        principalTable: "Artist",
+                        principalColumn: "Id");
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CD_ArtistId",
+                table: "CD",
+                column: "ArtistId");
         }
 
         /// <inheritdoc />
@@ -33,6 +57,9 @@ namespace NETMom3.Migrations
         {
             migrationBuilder.DropTable(
                 name: "CD");
+
+            migrationBuilder.DropTable(
+                name: "Artist");
         }
     }
 }

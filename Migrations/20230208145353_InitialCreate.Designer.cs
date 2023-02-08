@@ -11,7 +11,7 @@ using NET_Mom3.Data;
 namespace NETMom3.Migrations
 {
     [DbContext(typeof(CDContext))]
-    [Migration("20230208141022_InitialCreate")]
+    [Migration("20230208145353_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -20,10 +20,27 @@ namespace NETMom3.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.2");
 
+            modelBuilder.Entity("NET_Mom3.Models.Artist", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Artist");
+                });
+
             modelBuilder.Entity("NET_Mom3.Models.CD", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("ArtistId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Length")
@@ -40,7 +57,18 @@ namespace NETMom3.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ArtistId");
+
                     b.ToTable("CD");
+                });
+
+            modelBuilder.Entity("NET_Mom3.Models.CD", b =>
+                {
+                    b.HasOne("NET_Mom3.Models.Artist", "Artist")
+                        .WithMany()
+                        .HasForeignKey("ArtistId");
+
+                    b.Navigation("Artist");
                 });
 #pragma warning restore 612, 618
         }
