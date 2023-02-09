@@ -19,14 +19,14 @@ namespace NETMom3.Migrations
 
             modelBuilder.Entity("NET_Mom3.Models.Artist", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ArtistId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("ArtistId");
 
                     b.ToTable("Artist");
                 });
@@ -37,7 +37,7 @@ namespace NETMom3.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ArtistId")
+                    b.Property<int>("ArtistId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Length")
@@ -62,10 +62,17 @@ namespace NETMom3.Migrations
             modelBuilder.Entity("NET_Mom3.Models.CD", b =>
                 {
                     b.HasOne("NET_Mom3.Models.Artist", "Artist")
-                        .WithMany()
-                        .HasForeignKey("ArtistId");
+                        .WithMany("CDs")
+                        .HasForeignKey("ArtistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Artist");
+                });
+
+            modelBuilder.Entity("NET_Mom3.Models.Artist", b =>
+                {
+                    b.Navigation("CDs");
                 });
 #pragma warning restore 612, 618
         }

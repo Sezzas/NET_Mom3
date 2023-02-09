@@ -15,13 +15,13 @@ namespace NETMom3.Migrations
                 name: "Artist",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    ArtistId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Artist", x => x.Id);
+                    table.PrimaryKey("PK_Artist", x => x.ArtistId);
                 });
 
             migrationBuilder.CreateTable(
@@ -34,7 +34,7 @@ namespace NETMom3.Migrations
                     PublishedDate = table.Column<DateOnly>(type: "TEXT", nullable: false),
                     Tracks = table.Column<int>(type: "INTEGER", nullable: false),
                     Length = table.Column<string>(type: "TEXT", nullable: true),
-                    ArtistId = table.Column<int>(type: "INTEGER", nullable: true)
+                    ArtistId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -43,7 +43,8 @@ namespace NETMom3.Migrations
                         name: "FK_CD_Artist_ArtistId",
                         column: x => x.ArtistId,
                         principalTable: "Artist",
-                        principalColumn: "Id");
+                        principalColumn: "ArtistId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
