@@ -48,7 +48,7 @@ namespace NET_Mom3.Controllers
         // GET: CD/Create
         public IActionResult Create()
         {
-            ViewData["ArtistId"] = new SelectList(_context.Artist, "ArtistId", "ArtistId");
+            ViewData["Artist"] = new SelectList(_context.Artist, "ArtistId", "Name");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace NET_Mom3.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ArtistId"] = new SelectList(_context.Artist, "ArtistId", "ArtistId", cD.ArtistId);
+            ViewData["Artist"] = new SelectList(_context.Artist, "ArtistId", "Name", cD.ArtistId);
             return View(cD);
         }
 
@@ -82,7 +82,7 @@ namespace NET_Mom3.Controllers
             {
                 return NotFound();
             }
-            ViewData["ArtistId"] = new SelectList(_context.Artist, "ArtistId", "ArtistId", cD.ArtistId);
+            ViewData["Artist"] = new SelectList(_context.Artist, "ArtistId", "Name", cD.ArtistId);
             return View(cD);
         }
 
@@ -118,7 +118,7 @@ namespace NET_Mom3.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ArtistId"] = new SelectList(_context.Artist, "ArtistId", "ArtistId", cD.ArtistId);
+            ViewData["Artist"] = new SelectList(_context.Artist, "ArtistId", "Name", cD.ArtistId);
             return View(cD);
         }
 

@@ -1,31 +1,31 @@
 @model IEnumerable<NET_Mom3.Models.CD>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "CD-skivor";
 }
 
-<h1>Index</h1>
+<h1>CD-skivor</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Lägg till ny CD</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Namn
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PublishedDate)
+                Utgivningsdatum
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tracks)
+                Antal låtar
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Length)
+                Total låtlängd
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Artist)
+                Artist
             </th>
             <th></th>
         </tr>
@@ -46,12 +46,12 @@
                 @Html.DisplayFor(modelItem => item.Length)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Artist.ArtistId)
+                @Html.DisplayFor(modelItem => item.Artist.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Ändra</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detaljer</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Radera</a>
             </td>
         </tr>
 }
